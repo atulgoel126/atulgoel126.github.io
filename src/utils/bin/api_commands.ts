@@ -26,9 +26,9 @@ export const readme = async (args: string[]): Promise<string> => {
   return `Opening GitHub README...\n
   ${readme}
   ### hi! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="22">
-  i am sofware engineer specialzing in backend infrastructure and tools
+  i am a sofware engineer specialzing in backend infrastructure and tools
   - technologies - AWS, serverless, Java, Node.js, Docker, DevOps
-  - hobbies - backend architecture, automation, game development
+  - interests - backend architecture, automation, game development
   `;
 };
 
