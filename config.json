@@ -1,17 +1,17 @@
 {
   "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
-  "title": "LiveTerm",
-  "name": "John Doe",
-  "ascii": "liveterm",
+  "title": "Portfolio - Atul Goel",
+  "name": "Atul Goel",
+  "ascii": "cveinnt",
   "social": {
-    "github": "github",
-    "linkedin": "linkedin"
+    "github": "atulgoel126",
+    "linkedin": "atulgoel126"
   },
-  "email": "contact@email.com",
-  "ps1_hostname": "liveterm",
+  "email": "atul.goel.126@gmail.com",
+  "ps1_hostname": "atulgoel.me",
   "ps1_username": "visitor",
   "repo": "https://github.com/Cveinnt/LiveTerm",
-  "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
+  "resume_url": "https://drive.google.com/file/d/16rCK2YZ-nHAcEvG567ErKXvvh20lzxnK/view?usp=sharing",
   "donate_urls": {
     "paypal": "https://paypal.me/cveinnt",
     "patreon": "https://patreon.com/cveinnt"

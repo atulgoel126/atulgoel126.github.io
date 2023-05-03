@@ -21,9 +21,15 @@ export const quote = async (args: string[]): Promise<string> => {
 };
 
 export const readme = async (args: string[]): Promise<string> => {
-  const readme = await getReadme();
+  // const readme = await getReadme();
+  const readme = ''
   return `Opening GitHub README...\n
-  ${readme}`;
+  ${readme}
+  ### hi! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="22">
+  i am sofware engineer specialzing in backend infrastructure and tools
+  - technologies - AWS, serverless, Java, Node.js, Docker, DevOps
+  - hobbies - backend architecture, automation, game development
+  `;
 };
 
 export const weather = async (args: string[]): Promise<string> => {
