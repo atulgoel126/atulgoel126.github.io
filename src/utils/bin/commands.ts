@@ -81,15 +81,15 @@ export const duckduckgo = async (args: string[]): Promise<string> => {
   return `Searching duckduckgo for ${args.join(' ')}...`;
 };
 
-export const bing = async (args: string[]): Promise<string> => {
-  window.open(`https://bing.com/search?q=${args.join(' ')}`);
-  return `Wow, really? You are using bing for ${args.join(' ')}?`;
-};
-
-export const reddit = async (args: string[]): Promise<string> => {
-  window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`);
-  return `Searching reddit for ${args.join(' ')}...`;
-};
+// export const bing = async (args: string[]): Promise<string> => {
+//   window.open(`https://bing.com/search?q=${args.join(' ')}`);
+//   return `Wow, really? You are using bing for ${args.join(' ')}?`;
+// };
+//
+// export const reddit = async (args: string[]): Promise<string> => {
+//   window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`);
+//   return `Searching reddit for ${args.join(' ')}...`;
+// };
 
 // Typical linux commands
 export const echo = async (args: string[]): Promise<string> => {
@@ -100,13 +100,13 @@ export const whoami = async (args: string[]): Promise<string> => {
   return `${config.ps1_username}`;
 };
 
-export const ls = async (args: string[]): Promise<string> => {
-  return `a
-bunch
-of
-fake
-directories`;
-};
+// export const ls = async (args: string[]): Promise<string> => {
+//   return `a
+// bunch
+// of
+// fake
+// directories`;
+// };
 
 export const cd = async (args: string[]): Promise<string> => {
   return `unfortunately, i don't have access to your computer.. yet..'.`;
@@ -140,13 +140,20 @@ export const sudo = async (args?: string[]): Promise<string> => {
 // Banner
 export const banner = (args?: string[]): string => {
   return `
-██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗██╗
-██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝██║
-██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗  ██║
-██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝  ╚═╝
-╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗██╗
+██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗ ██╗
+██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝ ██║
+██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗   ██║
+██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝   ╚═╝
+╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗ ██╗
+
+Here are all the available commands:
+
+about     banner     cd        date    duckduckgo   echo    emacs
+email     github     google    help    linkedin     nvim    projects
+quote     readme     resume    sudo    sumfetch     vi      vim
+weather   whoami 
                                                                                                       
-Type 'help' to see the list of available commands.
+Type 'help' to see the list of available commands anytime.
 Type 'sumfetch' to display summary.
 `
 };
