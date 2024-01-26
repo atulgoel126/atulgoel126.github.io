@@ -11,7 +11,7 @@ export const help = async (args: string[]): Promise<string> => {
     if (i % 7 === 0) {
       c += Object.keys(bin).sort()[i - 1] + '\n';
     } else {
-      c += Object.keys(bin).sort()[i - 1] + '  ';
+      c += Object.keys(bin).sort()[i - 1] + '   \t';
     }
   }
   return `Welcome! Here are all the available commands:
@@ -137,6 +137,14 @@ export const sudo = async (args?: string[]): Promise<string> => {
   return `Permission denied: with little power comes... no responsibility? `;
 };
 
+export const demos = async (args?: string[]): Promise<string> => {
+  return `
+  Here's a list of all current demos:
+  
+  - <a href='demos/falling_sand/index.html'>falling_sand</a> 
+  - <a href='demos/ascii_video/index.html'>ascii_video</a> 
+  `;
+};
 // Banner
 export const banner = (args?: string[]): string => {
   return `
@@ -151,7 +159,7 @@ Here are all the available commands:
 about     banner     cd        date    duckduckgo   echo    emacs
 email     github     google    help    linkedin     nvim    projects
 quote     readme     resume    sudo    sumfetch     vi      vim
-weather   whoami 
+weather   whoami     demos
                                                                                                       
 Type 'help' to see the list of available commands anytime.
 Type 'sumfetch' to display summary.
