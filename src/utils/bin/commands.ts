@@ -143,6 +143,7 @@ export const demos = async (args?: string[]): Promise<string> => {
   
   - <a href='demos/falling_sand/index.html'>falling_sand</a> 
   - <a href='demos/ascii_video/index.html'>ascii_video</a> 
+  - <a href='demos/wave_function_collapse/index.html'>wave_function_collapse</a> 
   `;
 };
 // Banner
