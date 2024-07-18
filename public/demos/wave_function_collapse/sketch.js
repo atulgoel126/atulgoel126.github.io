@@ -66,7 +66,7 @@ function setup() {
     tempTiles = removeDuplicatedTiles(tempTiles);
     tiles = tiles.concat(tempTiles);
   }
-  console.log(tiles.length);
+  // console.log(tiles.length);
 
   // Generate the adjacency rules based on edges
   for (let i = 0; i < tiles.length; i++) {

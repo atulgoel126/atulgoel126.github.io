@@ -22,12 +22,6 @@ Type 'sumfetch' to display summary.
 `;
 };
 
-// Redirection
-// export const repo = async (args: string[]): Promise<string> => {
-//   window.open(`${config.repo}`);
-//   return 'Opening Github repository...';
-// };
-
 // About
 export const about = async (args: string[]): Promise<string> => {
   return `Hi, I am ${config.name}. 
@@ -42,15 +36,6 @@ export const resume = async (args: string[]): Promise<string> => {
   window.open(`${config.resume_url}`);
   return 'Opening resume...';
 };
-
-// Donate
-// export const donate = async (args: string[]): Promise<string> => {
-//   return `thank you for your interest.
-// here are the ways you can support my work:
-// - <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-// - <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
-// `;
-// };
 
 // Contact
 export const email = async (args: string[]): Promise<string> => {
@@ -144,6 +129,11 @@ export const demos = async (args?: string[]): Promise<string> => {
   - <a href='demos/falling_sand/index.html'>falling_sand</a> 
   - <a href='demos/ascii_video/index.html'>ascii_video</a> 
   - <a href='demos/wave_function_collapse/index.html'>wave_function_collapse</a> 
+  - <a href='demos/procedurally_generated_terrain_perlin_noise/index.html'>procedurally_generated_terrain_perlin_noise</a> 
+  - <a href='demos/game_of_life/index.html'>game_of_life</a> 
+  - <a href='demos/fluid_simulation/index.html'>fluid_simulation</a> 
+  - <a href='demos/approximating_pi/index.html'>approximating_pi</a> 
+  - <a href='demos/flocking_algorithm/index.html'>flocking_algorithm</a> 
   `;
 };
 // Banner
