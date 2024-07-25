@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My 6-Week DevSecOps Journey with TypeScript and AWS CDK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #3498db;
+            margin-top: 30px;
+        }
+
+        article {
+            margin-bottom: 30px;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .week-content {
+            border: 1px solid #eee;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>My 6-Week DevSecOps Journey with TypeScript and AWS CDK</h1>
+</header>
+
+<main>
+    <article>
+        <h2>Introduction</h2>
+        <p>
+            Over the past six weeks, I embarked on an intensive journey to deepen my understanding of DevSecOps practices, with a focus on Infrastructure as Code (IaC) using TypeScript and AWS CDK. This blog post summarizes my experience, key learnings, and the projects I worked on during this period.
+        </p>
+    </article>
+
+    <div id="week1" class="week-content"></div>
+    <div id="week2" class="week-content"></div>
+    <div id="week3" class="week-content"></div>
+    <div id="week4" class="week-content"></div>
+    <div id="week5" class="week-content"></div>
+    <div id="week6" class="week-content"></div>
+
+    <article>
+        <h2>Conclusion</h2>
+        <p>
+            This six-week journey has been an intensive dive into the world of DevSecOps. I've gained valuable skills in securing infrastructure, containers, and applications, and have learned to integrate security at every stage of the development lifecycle. Moving forward, I'm excited to apply these practices in real-world projects and continue exploring advanced DevSecOps concepts.
+        </p>
+    </article>
+</main>
+
+<footer>
+    <p>Written by Atul Goel | <a href="https://atulgoel.me">atulgoel.me</a> | Last updated: July 2023</p>
+</footer>
+
+<script>
+    // Function to load content
+    function loadContent(week) {
+        fetch(`week${week}/index.html`)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById(`week${week}`).innerHTML = data;
+            });
+    }
+
+    // Load content for each week
+    for (let i = 1; i <= 6; i++) {
+        loadContent(i);
+    }
+</script>
+</body>
+</html>
