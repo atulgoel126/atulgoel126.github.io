@@ -4,14 +4,14 @@ function setup() {
   createCanvas(1200, 800);
   flock = new Flock();
   // Add an initial set of boids into the system
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < 500; i++) {
     let b = new Boid(random(width), random(height));
     flock.addBoid(b);
   }
 }
 
 function draw() {
-  background(51);
+  background(51); // Dark background color
   flock.run();
 }
 
@@ -35,7 +35,7 @@ function Boid(x, y) {
   this.acceleration = createVector(0, 0);
   this.velocity = createVector(random(-1, 1), random(-1, 1));
   this.position = createVector(x, y);
-  this.r = 2.0;
+  this.r = 5.0; // Increased size for better visibility
   this.maxspeed = 3;    // Maximum speed
   this.maxforce = 0.05; // Maximum steering force
 }
@@ -88,17 +88,26 @@ Boid.prototype.seek = function(target) {
 
 Boid.prototype.render = function() {
   let theta = this.velocity.heading() + radians(90);
-  fill(127);
-  stroke(200);
+  let hue = map(theta, -PI, PI, 0, 360); // Map heading to hue value
+  colorMode(HSB);
+  fill(hue, 255, 255); // Set color based on hue
+  stroke(255, 255, 255); // White outline for birds
+
   push();
   translate(this.position.x, this.position.y);
   rotate(theta);
-  beginShape();
-  vertex(0, -this.r * 2);
-  vertex(-this.r, this.r * 2);
-  vertex(this.r, this.r * 2);
-  endShape(CLOSE);
+
+  // Draw the circle body
+  ellipse(0, 0, this.r * 2, this.r * 2);
+
+  // Draw the arrow indicating direction
+  strokeWeight(2);
+  line(0, 0, 0, -this.r * 2);
+  line(0, -this.r * 2, -this.r / 2, -this.r * 1.5);
+  line(0, -this.r * 2, this.r / 2, -this.r * 1.5);
+
   pop();
+  colorMode(RGB); // Reset color mode to RGB
 }
 
 // Wraparound
