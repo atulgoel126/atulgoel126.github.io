@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/global.css';
 import Head from 'next/head';
-import { Analytics } from '@vercel/analytics/react';
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
 
@@ -28,7 +27,6 @@ const App = ({ Component, pageProps }) => {
           <Component {...pageProps} inputRef={inputRef} />
         </main>
       </div>
-      <Analytics />
     </>
   );
 };
