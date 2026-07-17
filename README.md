@@ -1,37 +1,44 @@
-# [🔗 Atul Goel's Terminal-Styled Website](https://atulgoel.me)
+# [🔗 atulgoel.me](https://atulgoel.me) — Atul Goel's Pixel Room
 
-Welcome to my terminal-styled personal website! This site is built using the LiveTerm template and provides a unique, minimalistic way to interact with my profile and projects.
+My personal portfolio, redesigned as an interactive 2D pixel-art room — a cozy dusk studio
+where every object is clickable. No commands to learn: just point, hover, and click.
 
-## ✨ About Me
+## 🕯 The room
 
-Hi, I am Atul Goel. Welcome to my website! Here you can find more about me, my resume, and links to my social profiles.
+The scene is hand-drawn in code on a 480×270 canvas and scaled up with nearest-neighbor
+for crisp pixels. It's alive: rain on the window, steam rising from the coffee, a cat
+dreaming in Z's, twinkling string lights — and a real Game of Life running on the arcade screen.
 
-## 📄 Commands
+| Click… | To find… |
+| --- | --- |
+| 🖥 The monitor | Work history — 8 years across games & fintech |
+| 🕹 The arcade cabinet | Playable demos (fluid sim, flocking, WFC…) |
+| 📚 The bookshelf | Skills |
+| 📜 The framed diplomas | Education (CMU, VIT) |
+| ☎️ The red rotary phone | Contact |
+| 🗄 The file cabinet | Résumé (PDF) |
+| 🌆 The synthwave poster | About me |
+| 💾 The dusty old CRT | The original terminal site, kept as an easter egg |
+| 🐈 The cat | The cat |
+| 💡 The lamp | Lights out |
 
-Here are all the available commands you can use on my website:
+Sections can be deep-linked: `/?p=work`, `/?p=demos`, `/?p=contact`, …
 
-- **about**: Learn more about me.
-- **resume**: View or download my resume.
-- **readme**: This README file.
-- **email**: Open an email to contact me.
-- **github**: Visit my GitHub profile.
-- **linkedin**: Visit my LinkedIn profile.
-- **google [query]**: Search Google.
-- **duckduckgo [query]**: Search DuckDuckGo.
-- **echo [text]**: Echo the input text.
-- **whoami**: Display the current user.
-- **cd**: Display a message about changing directories.
-- **date**: Show the current date and time.
-- **vi**: A fun message about using 'vi'.
-- **vim**: A fun message about using 'vim'.
-- **nvim**: A fun message about using 'nvim'.
-- **emacs**: A fun message about using 'emacs'.
-- **sudo**: A surprise command.
-- **demos**: List of current demos available on the site.
-- **banner**: Display the welcome banner.
+The previous terminal-style site (based on [LiveTerm](https://github.com/Cveinnt/LiveTerm))
+still lives at [/terminal](https://atulgoel.me/terminal).
 
-## 🙏 Acknowledgements
+## 🛠 Development
 
-Based on M4TT72's awesome [Terminal](https://github.com/m4tt72/terminal) and Cveinnt's [LiveTerm](https://github.com/Cveinnt/LiveTerm).
+```bash
+npm install
+npm run dev    # http://localhost:3000
+npm run build  # static export to ./out
+```
 
-Feel free to explore and interact with the terminal commands to learn more about me and my work!
+Built with Next.js (static export), TypeScript, and a single `<canvas>`.
+Content lives in `src/data/resume.ts`; the scene is drawn in `src/components/room/scene.ts`.
+
+## 🚀 Deployment
+
+Every push to `main` triggers a GitHub Actions workflow that builds the static export
+and deploys it to GitHub Pages at [atulgoel.me](https://atulgoel.me).
